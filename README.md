@@ -139,12 +139,14 @@ tail = Temp;
 
 **3. Deleting:**
 
-A node in a doubly-linked list can be erased from any position, such as the front, end, or any other place
-or data.When removing a node from a doubly-linked list, we must first relocate the pointer referring to
-that node such that the preceding and following nodes have no relationship to the node to be removed.
+<p align="justify">A node in a doubly-linked list can be erased from any position, such as the front, end, or any other place or data.When removing a node from a doubly-linked list, we must first relocate the pointer referring to that node such that the preceding and following nodes have no relationship to the node to be removed.
 The node can then be simply deleted.
-Consider the following three-node doubly linked list: A, B, and C. Consider the case when we need to
-remove node B
+Consider the following three-node doubly linked list: A, B, and C. Consider the case when we need to remove node B.</p>
+
+<p align="center"> <img  src="./stuff/delete.png" width="500"> </p> 
+
+<p align="justify">We have shown the deletion of node B from the supplied linked list in the above sequence of diagrams. Even if the node is first or last, the operation sequence stays the same. The only precaution to consider is that if the first node is removed, the prior reference of the second node will be set to null.</p>
+<p align="justify">Similarly, when the final node is destroyed, the prior node's next pointer is set to null. If the nodes in between are removed, the sequence will be as shown above.</p>
 
 
 
