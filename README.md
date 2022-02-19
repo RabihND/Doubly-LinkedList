@@ -3,20 +3,16 @@
 <h1 align="center"> AP course HW  </h1>
 
 <p align="center">
-    <a alt="Version">
-        <img src="https://img.shields.io/github/v/release/RabihND/AP2021-2022-Final?color=14adfa&logo=Semantic%20Web&logoColor=14adfa&style=for-the-badge" /></a>
-    <a  alt="Downloads">
-        <img src="https://img.shields.io/github/downloads/RabihND/AP2021-2022-Final/total?logo=App%20Store&logoColor=white&style=for-the-badge" /></a>
-    <a href="https://github.com/RabihND/AP2021-2022-Final/graphs/contributors" alt="Contributers">
-        <img src="https://img.shields.io/github/contributors/RabihND/AP2021-2022-Final?color=6fd671&logo=WhiteSource&style=for-the-badge" /></a>
-    <a href="https://github.com/RabihND/AP2021-2022-Final//network/members" alt="Forks">
-        <img src="https://img.shields.io/github/forks/RabihND/AP2021-2022-Final?color=cccccc&logo=Node-RED&style=for-the-badge" /></a>
-    <a href=" https://github.com/RabihND/AP2021-2022-Final/stargazers">
-        <img src="https://img.shields.io/github/stars/RabihND/AP2021-2022-Final?color=8e6be8&logo=Ethereum&logoColor=8e6be8&style=for-the-badge" alt="Stars" /></a>
+    <a href="https://github.com/RabihND/Doubly-LinkedList/graphs/contributors" alt="Contributers">
+        <img src="https://img.shields.io/github/contributors/RabihND/Doubly-LinkedList?color=6fd671&logo=WhiteSource&style=for-the-badge" /></a>
+    <a href="https://github.com/RabihND/Doubly-LinkedList//network/members" alt="Forks">
+        <img src="https://img.shields.io/github/forks/RabihND/Doubly-LinkedList?color=cccccc&logo=Node-RED&style=for-the-badge" /></a>
+    <a href=" https://github.com/RabihND/Doubly-LinkedList/stargazers">
+        <img src="https://img.shields.io/github/stars/RabihND/Doubly-LinkedList?color=8e6be8&logo=Ethereum&logoColor=8e6be8&style=for-the-badge" alt="Stars" /></a>
     <a alt="Visitors">
-        <img src="https://visitor-badge-reloaded.herokuapp.com/badge?page_id=RabihND/AP2021-2022-Final?color=14adfa&logo=Android&style=for-the-badge" /></a>
-    <a href="https://github.com/RabihND/AP2021-2022-Final/master/LICENSE.txt">
-        <img src="https://img.shields.io/github/license/RabihND/AP2021-2022-Final?color=%2363afdb&logo=letsencrypt&style=for-the-badge" alt="License"></a>
+        <img src="https://visitor-badge-reloaded.herokuapp.com/badge?page_id=RabihND/Doubly-LinkedList?color=14adfa&logo=Android&style=for-the-badge" /></a>
+    <a href="https://github.com/RabihND/Doubly-LinkedList/master/LICENSE.txt">
+        <img src="https://img.shields.io/github/license/RabihND/Doubly-LinkedList?color=%2363afdb&logo=letsencrypt&style=for-the-badge" alt="License"></a>
     
 </p>
 
@@ -29,7 +25,7 @@
   <p align="center">
    Doubly Linked List Data Structure In C++
     <br />
-    <a href="https://github.com/RabihND/AP2021-2022-Final"><strong>Explore the documents »</strong></a>
+    <a href="https://github.com/RabihND/Doubly-LinkedList"><strong>Explore the documents »</strong></a>
     <br />
     <br />
   </p>
@@ -279,7 +275,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 Rabih ND - [@RabihND](https://github.com/RabihND) 
 
-**Project Link:** [https://github.com/RabihND/AP2021-2022-Final](https://github.com/RabihND/AP2021-2022-Final)
+**Project Link:** [https://github.com/RabihND/Doubly-LinkedList](https://github.com/RabihND/Doubly-LinkedList)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
