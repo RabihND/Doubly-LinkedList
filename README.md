@@ -107,13 +107,44 @@ head = Temp;
 };
 ```
 
-**3. GameOverWindow Class** (GUI_Window)
+**2. Insertion at the end:**
 
-The resulting window, which shows the player's loss(+) or victory(-).
-- **display_text()**: Return a text with include the result of the game.(Win/Loss)
+<p align="center"> <img  src="./stuff/push_back.png" width="1000"> </p> 
 
-**4. Splash Screen Class** (GUI_Windows)
->{⌛} 
+<p align="justify">We are given a pointer to a node as prev_node, and the new node is inserted after the given node.</p>
+
+>Same as **push_front()** but here we start from the head up toward tail.
+
+```C++
+void LinkedList::push_back(double data)
+{
+if (head == nullptr) {
+// Empty Case
+head = new Node(data);
+// delete[] head;
+} else {
+// Non Empty Case
+Node* Current = head;
+while (Current->next != nullptr) {
+Current = Current->next;
+}
+Node* Temp = new Node(data);
+Temp->next = nullptr;
+Temp->previous = Current;
+Current->next = Temp;
+tail = Temp;
+}
+};
+```
+
+**3. Deleting:**
+
+A node in a doubly-linked list can be erased from any position, such as the front, end, or any other place
+or data.When removing a node from a doubly-linked list, we must first relocate the pointer referring to
+that node such that the preceding and following nodes have no relationship to the node to be removed.
+The node can then be simply deleted.
+Consider the following three-node doubly linked list: A, B, and C. Consider the case when we need to
+remove node B
 
 
 
