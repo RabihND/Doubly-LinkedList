@@ -125,6 +125,10 @@ public:
 };
 ```
 
+```Node``` class is a nested class, which means that we have defined the class inside another class. ```LinkedList``` class has ```Node``` class. As you can see, definition of Node class is inside of LinkedList class.
+
+DO NOT change main.cpp.
+
 **1. Add a node at the front:**
 
 <p align="center"> <img  src="./stuff/push_front.png" width="500"> </p>  
@@ -283,13 +287,6 @@ Rabih ND - [@RabihND](https://github.com/RabihND)
 <!-- ROADMAP -->
 ## Roadmap
 
-- [x] Write the main code-map.
-- [x] Design the GUI window. 
-- [x] Write the MasterMain Core Functions.
-- [x] Design the GameOver window.
-- [x] <a href="https://github.com/RabihND/AP2021-2022-Final/releases/latest"><strong>Build the .EXE Release</strong></a>
-- [ ] Splash screen
-- [ ] Build APK release.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
