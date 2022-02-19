@@ -132,7 +132,7 @@ DO NOT change main.cpp.
 <p align="justify">The new node,here, is always placed before the Linked List's head. The freshly inserted node is now the Double Linked List's new head. For instance, if the supplied Linked List is 1234 and item 5 is added to the front, the Linked List becomes 51234. The function that adds to the front of the list will be called <b>push_front()</b>. Because push must update the head pointer to refer to the new node, <b>push_front()</b> must receive a pointer to the head pointer.</p>
 
 ```C++
-oid LinkedList::push_front(double data)
+void LinkedList::push_front(double data)
 {
 if (tail == nullptr) {
 //Empty Case
