@@ -21,7 +21,7 @@
 <div align="center">
 
   <h3 align="center"> Doubly-LinkedList📦</h3>
-  <p align="center"><img src="./stuff/game.gif" width="110"></p>
+  <p align="center"><img src="./stuff/datastructure.png" width="110"></p>
   <p align="center">
    Doubly Linked List Data Structure In C++
     <br />
