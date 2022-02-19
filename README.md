@@ -56,7 +56,7 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-<p align="center"> <img  src="./stuff/linkedlist.png" width="1000"> </p>  
+<p align="center"> <img  src="./stuff/linkedlist.png" width="500"> </p>  
 <p align="justify">In this homework you should implement linked-list data structure with c++.</p>
 
 <p align="justify">Each node has two pointers, one pointing to the previous node and the other pointing to the next node.
@@ -82,7 +82,7 @@ Major frameworks/libraries used in this project:
 
 **1. Add a node at the front:**
 
-<p align="center"> <img  src="./stuff/push_front.png" width="1000"> </p>  
+<p align="center"> <img  src="./stuff/push_front.png" width="500"> </p>  
 
 <p align="justify">The new node,here, is always placed before the Linked List's head. The freshly inserted node is now the Double Linked List's new head. For instance, if the supplied Linked List is 1234 and item 5 is added to the front, the Linked List becomes 51234. The function that adds to the front of the list will be called <b>push_front()</b>. Because push must update the head pointer to refer to the new node, <b>push_front()</b> must receive a pointer to the head pointer.</p>
 
@@ -95,8 +95,8 @@ tail = new Node(data);
 } else {
 //Non Empty Case
 Node* Current = tail;
-while (Current->previous != nullptr) { The beigining from the tail -> head
-Current = Current->previous; (where cur.prev equal zero)
+while (Current->previous != nullptr) { //The beigining from the tail -> head
+Current = Current->previous; //(where cur.prev equal zero)
 }
 Node* Temp = new Node(data);
 Temp->next = Current;
@@ -109,7 +109,7 @@ head = Temp;
 
 **2. Insertion at the end:**
 
-<p align="center"> <img  src="./stuff/push_back.png" width="1000"> </p> 
+<p align="center"> <img  src="./stuff/push_back.png" width="500"> </p> 
 
 <p align="justify">We are given a pointer to a node as prev_node, and the new node is inserted after the given node.</p>
 
@@ -148,8 +148,57 @@ Consider the following three-node doubly linked list: A, B, and C. Consider the 
 <p align="justify">We have shown the deletion of node B from the supplied linked list in the above sequence of diagrams. Even if the node is first or last, the operation sequence stays the same. The only precaution to consider is that if the first node is removed, the prior reference of the second node will be set to null.</p>
 <p align="justify">Similarly, when the final node is destroyed, the prior node's next pointer is set to null. If the nodes in between are removed, the sequence will be as shown above.</p>
 
+```C++
+double LinkedList::pop_back()
+{
+if (head == nullptr) {
+//Empty linked list
+throw std::out_of_range("Tried to pop empty linked list!");
+}
+if (head->next == nullptr) {
+//Size one case
+return head->getValue();
+delete head;
+head = nullptr;
+} else {
+//Size 2 or more case
+Node* Current = head;
+while (Current->next != nullptr) {
+Current = Current->next;
+}
+tail = Current->previous;
+Current->previous->next = nullptr;
+return Current->getValue(); //after getting the value its better to delete it
+delete Current;
+}
+};
 
 
+double LinkedList::pop_front()
+{
+if (tail == nullptr) {
+//Empty linked list
+throw std::out_of_range("Tried to pop empty linked list!");
+}
+if (tail->previous == nullptr) {
+//Size one case
+return tail->getValue();
+delete tail;
+tail = nullptr;
+} else {
+//Size 2 or more case
+Node* Current = tail;
+while (Current->previous != nullptr) {
+Current = Current->previous;
+}
+head = Current->next;
+Current->next->previous = nullptr;
+return Current->getValue();
+delete Current;
+}
+};
+```
+etc ...
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 <!-- RESULTS -->
