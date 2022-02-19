@@ -78,25 +78,34 @@ Major frameworks/libraries used in this project:
 
 <!-- PARTS -->
 ## Parts
-**1. Master Mind Class**
+**Class**
 
-The main MasterMind game Process; it contains:
-- **get_random_solution()**:  Returns a random "solution" to be the hidden code.
-- **check_guess()**: Returns the nb of "correct" and nb of "misplaced" guess.
-- **get_correct_colors()**: Returns the "correct" colors.
-- **get_misplaced_colors()**: Returns the "misplaced" colors.
-- **is_won()**: Verify that the guess is correct according to the solution.
- 
-**2. MainWindowUi  Class** (GUI_Window)
+**1. Add a node at the front:**
 
-The main window of the game designed by Qt; it contains:
-- **setupUi()**: The QT codes that generate the main window.
-- **resetButtonClicked()**:  That delete the selected colors.
-- **set_thisguesstable()**: connect the colors.
-- **clicked_color()**: Send the selected colors to the Guess table.
-- **clicked_submit()**:  After clicking the submit button; its check the guess and return the score to the Scores Table.
-- **show_game_over()**: Show the Game Over Dialog.
--**print_score()**: print score in the terminal (NOT GUI).
+<p align="center"> <img  src="./stuff/push_front.png" width="1000"> </p>  
+
+<p align="justify">The new node,here, is always placed before the Linked List's head. The freshly inserted node is now the Double Linked List's new head. For instance, if the supplied Linked List is 1234 and item 5 is added to the front, the Linked List becomes 51234. The function that adds to the front of the list will be called <b>push_front()</b>. Because push must update the head pointer to refer to the new node, <b>push_front()</b> must receive a pointer to the head pointer.</p>
+
+```C++
+oid LinkedList::push_front(double data)
+{
+if (tail == nullptr) {
+//Empty Case
+tail = new Node(data);
+} else {
+//Non Empty Case
+Node* Current = tail;
+while (Current->previous != nullptr) { The beigining from the tail -> head
+Current = Current->previous; (where cur.prev equal zero)
+}
+Node* Temp = new Node(data);
+Temp->next = Current;
+Temp->previous = nullptr;
+Current->previous = Temp;
+head = Temp;
+}
+};
+```
 
 **3. GameOverWindow Class** (GUI_Window)
 
