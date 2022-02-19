@@ -78,7 +78,52 @@ Major frameworks/libraries used in this project:
 
 <!-- PARTS -->
 ## Parts
-**Class**
+**LinkedList Class**
+
+This class represents each LinkedList object. It has the following methods and member variables.
+
+```C++
+class LinkedList {
+public:
+    class Node {
+    public:
+        Node();
+        Node(double);
+        Node* next;
+        Node* previous;
+        double getValue() const;
+        double& getValue();
+        void setValue(double);
+        friend std::ostream& operator<<(std::ostream& stream, const Node& node);
+
+    private:
+        double value;
+    };
+    LinkedList();
+    LinkedList(std::initializer_list<double>);
+    LinkedList(const LinkedList&);
+    ~LinkedList();
+    void push_back(double);
+    void push_front(double);
+    double pop_back();
+    double pop_front();
+    double back() const;
+    double front() const;
+    bool empty();
+    void clear();
+    void show() const;
+    int getSize() const;
+    void extend(const LinkedList&);
+    double& operator[](int);
+
+private:
+    int N {};
+
+public:
+    Node* head;
+    Node* tail;
+};
+```
 
 **1. Add a node at the front:**
 
@@ -204,23 +249,7 @@ etc ...
 <!-- RESULTS -->
 ## Results
 
-**GUI OUTPUT:**
-<details>
-<summary>ScreenShoot Preview 🖼️</summary>
-  <body>
-    <p align="center"> <img src="./stuff/GUI_output.jpg" width="200"> </p>
-  </body>
-</details>
 
----
-
-**TERMINAL OUTPUT:**
-<details>
-<summary>ScreenShoot Preview 🖼️</summary>
-  <body>
-    <p align="center"> <img src="./stuff/terminal_output.jpg" width="300"> </p>
-  </body>
-</details>
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -245,8 +274,6 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 
 Rabih ND - [@RabihND](https://github.com/RabihND) 
-
-Hasan Sanei - [@hasansanei](https://github.com/hasansanei)
 
 **Project Link:** [https://github.com/RabihND/AP2021-2022-Final](https://github.com/RabihND/AP2021-2022-Final)
 
