@@ -210,3 +210,28 @@ int LinkedList::getSize()
     }
     return counter;
 };
+
+//***********************************************
+
+int LinkedList::operator[](size_t ind) const
+{
+    // Start at the head of the list
+    Node* current = head;
+    // Loop as long as we don't go of the end of the list and `n` is larger than zero
+    // Also decrement `n` after checking its value
+    while (current != nullptr && ind-- > 0) {
+        // Make `current` point to the next node in the list
+        current = current->next;
+    }
+    // If `current` is a null pointer, then we have gone of the end of the list, return some default value
+    // Otherwise return the value of node we were looking for
+    return (current == nullptr ? 0 : current->getValue());
+};
+
+std::ostream& operator<<(std::ostream& os, LinkedList::Node& list)
+{
+
+    os << list.getValue();
+
+    return os;
+};
