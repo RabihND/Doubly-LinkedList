@@ -211,6 +211,11 @@ int LinkedList::getSize()
     return counter;
 };
 
+void LinkedList::extend(const LinkedList&)
+{
+    std::cout << ";-)" << std::endl;
+};
+
 //***********************************************
 
 int LinkedList::operator[](size_t ind) const
