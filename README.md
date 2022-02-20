@@ -249,6 +249,14 @@ etc ...
 <!-- RESULTS -->
 ## Results
 
+First of all comment the ```dll_unittest.cpp``` folder to avoid faild process. Then build the docker container in the same path,
+> e.g. by running ``` docker build -t [desiredname] .```
+
+Then **run** the docker container by: _(+interactive )_
+```zsh
+docker run -v $PWD:/usr/src/app --rm -it [containername] bash -l 
+```
+After that just ```make``` && ```./main``` to execut the files.
 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
