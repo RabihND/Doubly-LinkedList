@@ -30,3 +30,30 @@ LinkedList::~LinkedList()
     delete head;
     delete tail;
 };
+
+//***************NESTED "NODE" CLASS MEMBERS****************
+LinkedList::Node::Node()
+{
+    value = 0;
+    previous = nullptr;
+    next = nullptr;
+    // std::cout << " Node Default Constructor " << std::endl;
+};
+
+LinkedList::Node::Node(double Value)
+    : value(Value)
+    , next(nullptr)
+    , previous(nullptr)
+
+{
+    setValue(Value);
+};
+
+double LinkedList::Node::getValue()
+{
+    return value;
+};
+void LinkedList::Node::setValue(double _value)
+{
+    value = _value;
+};
