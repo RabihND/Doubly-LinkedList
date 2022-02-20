@@ -172,3 +172,41 @@ bool LinkedList::empty()
 {
     return head == nullptr;
 };
+
+void LinkedList::clear()
+{
+    Node* Current = head;
+    while (Current != nullptr) {
+        Node* Temp = Current->next;
+        // delete Current;
+        Current = Temp;
+    }
+    head = nullptr;
+    tail = nullptr;
+};
+
+void LinkedList::show()
+{
+    if (head == nullptr) {
+        // Empty linked list
+        throw std::logic_error("Tried  to call front element on empty  linked list !");
+    }
+    Node* list = head;
+    while (list) {
+        std::cout << list->getValue() << "  ";
+        list = list->next;
+    }
+    std::cout << std::endl;
+};
+
+int LinkedList::getSize()
+{
+    Node* tmp = head;
+    int counter = 0;
+
+    while (tmp != NULL) {
+        counter += 1;
+        tmp = tmp->next;
+    }
+    return counter;
+};
