@@ -144,3 +144,31 @@ double LinkedList::pop_front()
         delete Current;
     }
 };
+
+double LinkedList::back()
+{
+    if (head == nullptr) {
+        // Empty linked list
+        throw std::logic_error("Tried  to call back elemet on empty  linked list !");
+    }
+    Node* Current = head;
+    while (Current->next != nullptr) {
+        Current = Current->next;
+    }
+    tail = Current;
+    return tail->getValue();
+};
+
+double LinkedList::front()
+{
+    if (head == nullptr) {
+        // Empty linked list
+        throw std::logic_error("Tried  to call front element on empty  linked list !");
+    }
+    return head->getValue();
+};
+
+bool LinkedList::empty()
+{
+    return head == nullptr;
+};
