@@ -57,3 +57,42 @@ void LinkedList::Node::setValue(double _value)
 {
     value = _value;
 };
+
+void LinkedList::push_back(double data)
+{
+    if (head == nullptr) {
+        // Empty Case
+        head = new Node(data);
+        // delete[] head;
+    } else {
+        // Non Empty Case
+        Node* Current = head;
+        while (Current->next != nullptr) {
+            Current = Current->next;
+        }
+        Node* Temp = new Node(data);
+        Temp->next = nullptr;
+        Temp->previous = Current;
+        Current->next = Temp;
+        tail = Temp;
+    }
+};
+
+void LinkedList::push_front(double data)
+{
+    if (tail == nullptr) {
+        // Empty Case
+        tail = new Node(data);
+    } else {
+        // Non Empty Case
+        Node* Current = tail;
+        while (Current->previous != nullptr) {
+            Current = Current->previous;
+        }
+        Node* Temp = new Node(data);
+        Temp->next = Current;
+        Temp->previous = nullptr;
+        Current->previous = Temp;
+        head = Temp;
+    }
+};
