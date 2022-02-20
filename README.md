@@ -256,6 +256,8 @@ Then **run** the docker container by: _(+interactive )_
 ```zsh
 docker run -v $PWD:/usr/src/app --rm -it [containername] bash -l 
 ```
+RUN ```mkdir obj```
+
 After that just ```make``` && ```./main``` to execut the files.
 
 
