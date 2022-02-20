@@ -96,3 +96,51 @@ void LinkedList::push_front(double data)
         head = Temp;
     }
 };
+
+double LinkedList::pop_back()
+{
+    if (head == nullptr) {
+        // Empty linked list
+        throw std::out_of_range("Tried  to pop empty  linked list!");
+    }
+    if (head->next == nullptr) {
+        // Size one case
+        return head->getValue();
+        delete head;
+        head = nullptr;
+    } else {
+        // Size 2 or more case
+        Node* Current = head;
+        while (Current->next != nullptr) {
+            Current = Current->next;
+        }
+        tail = Current->previous;
+        Current->previous->next = nullptr;
+        return Current->getValue();
+        delete Current;
+    }
+};
+
+double LinkedList::pop_front()
+{
+    if (tail == nullptr) {
+        // Empty linked list
+        throw std::out_of_range("Tried  to pop empty  linked list!");
+    }
+    if (tail->previous == nullptr) {
+        // Size one case
+        return tail->getValue();
+        delete tail;
+        tail = nullptr;
+    } else {
+        // Size 2 or more case
+        Node* Current = tail;
+        while (Current->previous != nullptr) {
+            Current = Current->previous;
+        }
+        head = Current->next;
+        Current->next->previous = nullptr;
+        return Current->getValue();
+        delete Current;
+    }
+};
