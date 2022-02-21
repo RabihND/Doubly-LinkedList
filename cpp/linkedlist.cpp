@@ -234,7 +234,7 @@ int LinkedList::operator[](size_t ind) const
     return (current == nullptr ? 0 : current->getValue());
 };
 
-std::ostream& operator<<(std::ostream& os, LinkedList::Node& list)
+std::ostream& operator<<(std::ostream& os, const LinkedList::Node& list)
 {
 
     os << list.getValue();

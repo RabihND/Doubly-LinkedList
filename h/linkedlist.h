@@ -14,7 +14,7 @@ public:
         Node* previous;
         double getValue(); // Get Value
         void setValue(double _value); // Set Value
-        friend std::ostream& operator<<(std::ostream&, LinkedList::Node&);
+        friend std::ostream& operator<<(std::ostream&, const LinkedList::Node&);
 
     private:
         double value;
