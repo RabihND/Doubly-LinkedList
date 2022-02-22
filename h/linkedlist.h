@@ -12,7 +12,7 @@ public:
         Node(double Value); // Costructor
         Node* next;
         Node* previous;
-        double getValue(); // Get Value
+        double getValue() const; // Get Value
         void setValue(double _value); // Set Value
         friend std::ostream& operator<<(std::ostream&, const LinkedList::Node&);
 
@@ -21,7 +21,7 @@ public:
     };
     LinkedList(); // Default Constructor
     LinkedList(const LinkedList&); // Copy constructor
-    LinkedList(const std::initializer_list<double>& v);
+    LinkedList(std::initializer_list<double> v);
     ~LinkedList(); // Destructor
     void push_back(double value); // Add Node after "Tail"
     void push_front(double); // Add Node before "Head"
@@ -34,7 +34,7 @@ public:
     void show();
     int getSize();
     void extend(const LinkedList&);
-    int operator[](size_t) const;
+    double& operator[](int);
 
 private:
     int N { 0 };
