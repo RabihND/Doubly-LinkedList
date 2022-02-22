@@ -8,7 +8,7 @@ LinkedList::LinkedList()
 
     };
 
-LinkedList::LinkedList(const std::initializer_list<double>& v)
+LinkedList::LinkedList(std::initializer_list<double> v)
 {
     LinkedList l;
     size_t i { 0 };
@@ -49,7 +49,7 @@ LinkedList::Node::Node(double Value)
     setValue(Value);
 };
 
-double LinkedList::Node::getValue()
+double LinkedList::Node::getValue() const
 {
     return value;
 };

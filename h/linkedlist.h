@@ -34,7 +34,7 @@ public:
     void show();
     int getSize();
     void extend(const LinkedList&);
-    double& operator[](int);
+    int operator[](size_t) const;
 
 private:
     int N { 0 };
