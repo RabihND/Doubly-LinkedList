@@ -211,7 +211,7 @@ int LinkedList::getSize()
     return counter;
 };
 
-void LinkedList::extend(const LinkedList&)
+void LinkedList::extend(const LinkedList& linkedlist)
 {
     for (Node* item { linkedlist.head }; item; item = item->next)
         this->push_back(item->getValue());
