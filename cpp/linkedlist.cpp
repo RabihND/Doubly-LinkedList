@@ -219,20 +219,33 @@ void LinkedList::extend(const LinkedList& linkedlist)
 
 //***********************************************
 
-int LinkedList::operator[](size_t ind) const
+// int LinkedList::operator[](size_t ind) const
+// {
+//     // Start at the head of the list
+//     Node* current = head;
+//     // Loop as long as we don't go of the end of the list and `n` is larger than zero
+//     // Also decrement `n` after checking its value
+//     while (current != nullptr && ind-- > 0) {
+//         // Make `current` point to the next node in the list
+//         current = current->next;
+//     }
+//     // If `current` is a null pointer, then we have gone of the end of the list, return some default value
+//     // Otherwise return the value of node we were looking for
+//     return (current == nullptr ? 0 : current->getValue());
+// };
+
+double& LinkedList::operator[](int idx)
 {
-    // Start at the head of the list
-    Node* current = head;
-    // Loop as long as we don't go of the end of the list and `n` is larger than zero
-    // Also decrement `n` after checking its value
-    while (current != nullptr && ind-- > 0) {
-        // Make `current` point to the next node in the list
-        current = current->next;
+    if (empty() || idx >= N || idx < 0)
+        throw std::logic_error { "Index is out of range!" };
+    else {
+        Node* node = head;
+        for (int i {}; i < idx; i++, node = node->next)
+            ;
+
+        return node->value;
     }
-    // If `current` is a null pointer, then we have gone of the end of the list, return some default value
-    // Otherwise return the value of node we were looking for
-    return (current == nullptr ? 0 : current->getValue());
-};
+}
 
 std::ostream& operator<<(std::ostream& os, const LinkedList::Node& list)
 {
