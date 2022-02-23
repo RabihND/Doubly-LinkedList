@@ -242,10 +242,9 @@ double& LinkedList::operator[](int idx)
         Node* node = head;
         for (int i {}; i < idx; i++, node = node->next)
             ;
-
-        return node->value;
+        return node->getValue();
     }
-}
+};
 
 std::ostream& operator<<(std::ostream& os, const LinkedList::Node& list)
 {
